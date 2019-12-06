@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.bitsevn.projects.chat.core";
+
+message ChatRequest {
+    string firstName = 1;
+    string lastName = 2;
+}
+
+message ChatResponse {
+    string greeting = 1;
+}
+
+service ChatService {
+    rpc hello(ChatRequest) returns (ChatResponse);
+}
